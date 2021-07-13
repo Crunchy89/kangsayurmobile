@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setUpBottomNav()
+    }
+
+    fun setUpBottomNav(){
         fm.beginTransaction().add(R.id.container,fragmentBeranda).show(fragmentBeranda).commit()
         fm.beginTransaction().add(R.id.container,fragmentKeranjang).hide(fragmentKeranjang).commit()
         fm.beginTransaction().add(R.id.container,fragmentPesanan).hide(fragmentPesanan).commit()
